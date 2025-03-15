@@ -18,10 +18,14 @@ btn.addEventListener("click",function()
         li1.appendChild(del);
         
    });
-   let delbtn=document.querySelectorAll("ol");
-   delbtn.addEventListener("click",()=>
+   let delbtn=document.querySelector("ol");
+   delbtn.addEventListener("click",(event)=>
    {
-    
+       if (event.target.nodeName=="BUTTON")
+       {
+          event.target.parentElement.remove();
+       }
+        
    }
 )
    
